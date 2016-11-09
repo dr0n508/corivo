@@ -3,6 +3,7 @@
 * {
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
+  font-size: 13px;
 }
 
 body {
@@ -31,7 +32,7 @@ $light-brown-color: #fef8dd;
 $white-color: white;
 
 .gradient {
-
+  background: linear-gradient(135deg, #008ccc 35%,#47afb4 70%);
 }
 
 .shadow {
@@ -101,5 +102,11 @@ header {
       margin-right: 10px;
     }
   }
+}
+
+aside {
+  width: 16.67%;
+  @extend .gradient
+
 }
 

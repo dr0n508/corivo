@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500&subset=cyrillic,cyrillic-ext,latin-ext");
 * {
   font-family: 'Roboto', sans-serif;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-size: 13px; }
 
 body {
   margin: 0; }
@@ -14,6 +15,9 @@ div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd
   text-decoration: none !important; }
 
 /*****color scheme***/
+.gradient, aside {
+  background: linear-gradient(135deg, #008ccc 35%, #47afb4 70%); }
+
 .shadow, header {
   -webkit-box-shadow: 0 5px 15px 0 rgba(180, 180, 180, 0.25);
   -moz-box-shadow: 0 5px 15px 0 rgba(180, 180, 180, 0.25);
@@ -67,5 +71,8 @@ header {
       font-size: 12px;
       color: #008ccc;
       margin-right: 10px; }
+
+aside {
+  width: 16.67%; }
 
 /*# sourceMappingURL=main.css.map */
