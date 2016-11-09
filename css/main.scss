@@ -19,9 +19,9 @@ div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd
 }
 
 /*****color scheme***/
-$blue-color: #008ccc;
-$background-gray-color: #f0f0f0;
 $light-blue-color: #57b5de;
+$blue-color: #008ccc;
+$dark-blue-color: #167491;
 $orange-color: #ff7415;
 $dark-orange-color: #da7d3c;
 $green-color: #007366;
@@ -30,9 +30,11 @@ $dark-gray-color: #505050;
 $brown-color: #faecd1;
 $light-brown-color: #fef8dd;
 $white-color: white;
+$background-gray-color: #f0f0f0;
+$border-color: #e3e3e3;
 
 .gradient {
-  background: linear-gradient(135deg, #008ccc 35%,#47afb4 70%);
+  background: linear-gradient(135deg, #008ccc 35%,#47afb4 90%);
 }
 
 .shadow {
@@ -43,6 +45,8 @@ $white-color: white;
 
 header {
   overflow: hidden;
+  position: relative;
+  z-index: 1;
   @extend .shadow;
   .logo {
     float: left;
@@ -104,9 +108,185 @@ header {
   }
 }
 
-aside {
-  width: 16.67%;
-  @extend .gradient
+.business-dash-ico {
+  width: 16px;
+  height: 17px;
+  display: inline-block;
+  background: url("../img/icon-business-dash- white.png") no-repeat 50% 50%;
+}
 
+.incoming-quote-request {
+  width: 30px;
+  height: 28px;
+  display: inline-block;
+  background: url("../img/icon-incoming-quote-request-blue.png") no-repeat 50% 50%;
+}
+
+aside {
+  @extend .gradient;
+  width: 16.67%;
+  color: $white-color;
+  float: left;
+  .header-aside, .header-aside-section {
+    font-weight: 400;
+  }
+  .header-aside {
+    padding: 30px 0 30px 30px;
+    border-bottom: solid 1px $background-gray-color;
+    span {
+      font-weight: 400;
+      display: inline-block;
+      margin-left: 10px;
+      color: $white-color;
+    }
+  }
+  .section-aside {
+    padding: 20px 0 20px 20px;
+    border-bottom: solid 1px $background-gray-color;
+    .header-aside-section {
+      color: $background-gray-color;
+      margin-bottom: 20px;
+    }
+    ul {
+      text-align: right;
+    }
+    .item-list.active {
+      background-color: $dark-blue-color;
+      border-radius: 3px 0 0 3px;
+      a:before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -7px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 7px 7px 7px 0;
+        border-color: transparent $background-gray-color transparent transparent;
+      }
+    }
+    .item-list {
+      margin-bottom: 10px;
+      a {
+        display: block;
+        color: $white-color;
+        padding: 10px 15px 10px 10px;
+        position: relative;
+        .icon {
+          margin-right: 15px;
+        }
+        .new {
+          margin: -10px 10px 0 10px;
+          font-size: 20px;
+        }
+        .text-item, .icon, .new {
+          float: left;
+        }
+      }
+    }
+  }
+  .collapse-menu-btn {
+    padding: 30px 0 30px 30px;
+    a {
+      color: $white-color;
+    }
+    .business-dash-ico {
+      margin-right: 10px;
+    }
+  }
+
+}
+
+.dashboard {
+  background-color: $background-gray-color;
+  width: 83.33%;
+  float: left;
+  padding: 40px;
+  position: relative;
+  .label-dashboard {
+    color: $white-color;
+    position: absolute;
+    top: 35px;
+    left: 350px;
+  }
+  .header-dashboard {
+    padding-bottom: 20px;
+    color: $gray-color;
+    border-bottom: solid 1px $border-color;
+    display: flex;
+    align-items: center;
+    .icon {
+      margin-right: 20px;
+    }
+    .text {
+      font-size: 17px;
+    }
+  }
+  ul {
+    margin-top: 20px;
+    li {
+      @extend .shadow;
+      border-radius: 5px;
+      background-color: $white-color;
+      display: flex;
+      .block1, .block2, .block3, .block4, .block5 {
+        padding: 15px;
+        border-right: solid 1px $border-color;
+      }
+      .block2, .block3, .block4, .block5 {
+        display: flex;
+        align-items: center;
+      }
+      .block1 {
+        background-color: $blue-color;
+        border-radius: 5px 0 0 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 4.6%;
+      }
+      .block2 {
+        width: 19.6%;
+        justify-content: space-between;
+        font-weight: 300;
+        color: $gray-color;
+      }
+      .block3 {
+        width: 22.3%;
+        color: $gray-color;
+
+      }
+      .block4 {
+        width: 35.7%;
+        color: $dark-gray-color;
+        font-weight: 500;
+        p {
+          font-size: 14px !important;
+        }
+
+
+      }
+      .block5 {
+        width: 17.8%;
+        border: none;
+        justify-content: center;
+        .btn-group {
+          .btn {
+            border: solid 1px $border-color;
+            padding: 7px 10px;
+            color: $gray-color;
+            font-weight: 300;
+          }
+          .btn:first-child {
+            border-radius: 3px 0 0 3px;
+          }
+          .btn:last-child {
+            border-radius: 0 3px 3px 0;
+          }
+        }
+      }
+    }
+  }
 }
 
