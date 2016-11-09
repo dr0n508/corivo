@@ -76,3 +76,32 @@ aside {
   width: 16.67%; }
 
 /*# sourceMappingURL=main.css.map */
+
+
+
+/*-----------testing-------------------*/
+
+.gradient-img {
+  float: left;
+  width: 240px;
+  height: 875px;
+  /*border: 1px solid black;*/
+  background-image: url("../img/sidebar-gradient.png");
+  /*background-size: auto;*/
+
+}
+
+.gradient {
+  float: left;
+  width: 240px;
+  height: 875px;
+  margin-left: 50px;
+  border: 1px solid black;
+  /*background: linear-gradient(135deg, #008ccc 0%,#47afb4 100%);*/
+  background: linear-gradient(135deg, #008ccc 0%,#47afb4 70%);
+
+}
+
+
+
+/*-----------testing-------------------*/
