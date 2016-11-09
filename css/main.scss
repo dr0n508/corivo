@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&subset=cyrillic,cyrillic-ext,latin-ext');
-
+@import url('../css/ui-kit.css');
 * {
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
@@ -108,19 +108,9 @@ header {
   }
 }
 
-.business-dash-ico {
-  width: 16px;
-  height: 17px;
-  display: inline-block;
-  background: url("../img/icon-business-dash- white.png") no-repeat 50% 50%;
-}
 
-.incoming-quote-request {
-  width: 30px;
-  height: 28px;
-  display: inline-block;
-  background: url("../img/icon-incoming-quote-request-blue.png") no-repeat 50% 50%;
-}
+
+
 
 aside {
   @extend .gradient;
@@ -273,8 +263,10 @@ aside {
         justify-content: center;
         .btn-group {
           .btn {
-            border: solid 1px $border-color;
-            padding: 7px 10px;
+            border-top: solid 1px $border-color;
+            border-bottom: solid 1px $border-color;
+            border-left: solid 1px $border-color;
+            padding: 6px 10px;
             color: $gray-color;
             font-weight: 300;
           }
@@ -283,6 +275,7 @@ aside {
           }
           .btn:last-child {
             border-radius: 0 3px 3px 0;
+            border-right: solid 1px $border-color;
           }
         }
       }

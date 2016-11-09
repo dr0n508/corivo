@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500&subset=cyrillic,cyrillic-ext,latin-ext");
+@import url("../css/ui-kit.css");
 * {
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
@@ -73,18 +74,6 @@ header {
       font-size: 12px;
       color: #008ccc;
       margin-right: 10px; }
-
-.business-dash-ico {
-  width: 16px;
-  height: 17px;
-  display: inline-block;
-  background: url("../img/icon-business-dash- white.png") no-repeat 50% 50%; }
-
-.incoming-quote-request {
-  width: 30px;
-  height: 28px;
-  display: inline-block;
-  background: url("../img/icon-incoming-quote-request-blue.png") no-repeat 50% 50%; }
 
 aside {
   width: 16.67%;
@@ -202,13 +191,16 @@ aside {
         border: none;
         justify-content: center; }
         .dashboard ul li .block5 .btn-group .btn {
-          border: solid 1px #e3e3e3;
-          padding: 7px 10px;
+          border-top: solid 1px #e3e3e3;
+          border-bottom: solid 1px #e3e3e3;
+          border-left: solid 1px #e3e3e3;
+          padding: 6px 10px;
           color: #7b7b7b;
           font-weight: 300; }
         .dashboard ul li .block5 .btn-group .btn:first-child {
           border-radius: 3px 0 0 3px; }
         .dashboard ul li .block5 .btn-group .btn:last-child {
-          border-radius: 0 3px 3px 0; }
+          border-radius: 0 3px 3px 0;
+          border-right: solid 1px #e3e3e3; }
 
 /*# sourceMappingURL=main.css.map */
