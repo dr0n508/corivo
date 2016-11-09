@@ -1,5 +1,105 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&subset=cyrillic,cyrillic-ext,latin-ext');
 
 * {
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+}
+
+div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, td, tr, form, fieldset, label, select, input, textarea, address {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  list-style: none;
+  text-decoration: none !important;
+}
+
+/*****color scheme***/
+$blue-color: #008ccc;
+$background-gray-color: #f0f0f0;
+$light-blue-color: #57b5de;
+$orange-color: #ff7415;
+$dark-orange-color: #da7d3c;
+$green-color: #007366;
+$gray-color: #7b7b7b;
+$dark-gray-color: #505050;
+$brown-color: #faecd1;
+$light-brown-color: #fef8dd;
+$white-color: white;
+
+.gradient {
+
+}
+
+.shadow {
+  -webkit-box-shadow: 0 5px 15px 0 rgba(180, 180, 180, 0.25);
+  -moz-box-shadow: 0 5px 15px 0 rgba(180, 180, 180, 0.25);
+  box-shadow: 0 5px 15px 0 rgba(180, 180, 180, 0.25);
+}
+
+header {
+  overflow: hidden;
+  @extend .shadow;
+  .logo {
+    float: left;
+    width: 16.65%;
+    display: flex;
+    height: 67px;
+    align-items: center;
+    img {
+      margin: 0 20px;
+    }
+    h1 {
+      display: inline-block;
+      font-size: 26px;
+      font-weight: 400;
+    }
+  }
+  .main-nav {
+    width: 66.66%;
+    float: left;
+    ul {
+      float: right;
+      padding-right: 50px;
+      li {
+        display: inline-block;
+        a {
+          color: $gray-color;
+          text-decoration: none;
+          padding: 25px 15px;
+          font-size: 14px;
+          font-weight: 300;
+          display: block;
+        }
+      }
+      .active a {
+        background-color: $light-blue-color;
+        color: $white-color;
+      }
+    }
+  }
+  .authentication-user {
+    height: 67px;
+    float: left;
+    width: 16.65%;
+    display: flex;
+    align-items: center;
+    .avatar-user {
+      border-radius: 50%;
+      margin-right: 20px;
+      float: left;
+    }
+    .user-name {
+      font-size: 13px;
+    }
+    .user-link {
+      font-size: 12px;
+      color: $blue-color;
+      margin-right: 10px;
+    }
+  }
+}
+
