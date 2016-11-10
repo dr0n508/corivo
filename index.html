@@ -36,7 +36,7 @@
 <aside>
     <div class="header-aside">
       <a href="#">
-        <span class="business-dash-ico"></span>
+        <span class="icon business-dash-ico"></span>
         <span>Business Dashboard</span>
       </a>
     </div>
@@ -48,23 +48,21 @@
           <span class="icon business-dash-ico"></span>
           <span class="text-item">Inc. Quote Requests</span>
           <span class="new">&bull;</span>
-          <span>10</span>
+          <span class="number-message">10</span>
         </a>
       </li>
       <li class="item-list">
         <a href="#">
           <span class="icon business-dash-ico"></span>
           <span class="text-item">My cases</span>
-          <span class="new">&bull;</span>
-          <span>10</span>
+          <span class="number-message">10</span>
         </a>
       </li>
       <li class="item-list">
         <a href="#">
           <span class="icon business-dash-ico"></span>
           <span class="text-item">Awaiting feedback</span>
-          <span class="new">&bull;</span>
-          <span>10</span>
+          <span class="number-message">10</span>
         </a>
       <li>
     </ul>
@@ -77,23 +75,21 @@
           <span class="icon business-dash-ico"></span>
           <span class="text-item">Completed offers</span>
           <span class="new">&bull;</span>
-          <span>10</span>
+          <span class="number-message">10</span>
         </a>
       </li>
       <li class="item-list">
         <a href="#">
           <span class="icon business-dash-ico"></span>
           <span class="text-item">Rejected</span>
-          <span class="new">&bull;</span>
-          <span>10</span>
+          <span class="number-message"class="number-message">10</span>
         </a>
       </li>
       <li class="item-list">
         <a href="#">
           <span class="icon business-dash-ico"></span>
           <span class="text-item">Inappropriate</span>
-          <span class="new">&bull;</span>
-          <span>10</span>
+          <span class="number-message">10</span>
         </a>
       <li>
     </ul>
@@ -106,16 +102,45 @@
   </div>
 </aside>
 <section class="dashboard">
-  <p class="label-dashboard">Business Dashboard</p>
   <p class="header-dashboard">
     <span class="icon incoming-quote-request"></span>
     <span class="text">Incoming Quote Requests</span>
   </p>
 
-  <ul>
-    <li>
+  <ul class="list-messages">
+
+    <li class="header-dashboard-table">
+      <div class="header-block1">
+        <p>Received</p>
+        <p>Estimate</p>
+      </div>
+      <div class="header-block2">
+        <div class="dropdown">
+          Customer <span class="icon reject-gray-ico"></span>
+          <ul class="dropdown-menu">
+            <li class="item-dropdown">
+              <div class="label"><span class="icon reject-gray-ico"></span>Order</div>
+              <a href="#">Sort alphabetically</a>
+              <a href="#">Sort by rating</a>
+            </li>
+            <li class="item-dropdown">
+              <div class="label"><span class="icon reject-gray-ico"></span>Filter</div>
+              <a href="#">Registered & new</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header-block3">
+        <p>Message</p>
+      </div>
+      <div class="header-block4">
+        <p>Actions</p>
+      </div>
+    </li>
+
+    <li class="row-table-dashboard">
       <div class="block1">
-        <span class="icon business-dash-ico"></span>
+        <span class="icon star-ico"></span>
       </div>
       <div class="block2">
         <div>
@@ -125,11 +150,11 @@
         <div>1 day 20:25</div>
       </div>
       <div class="block3">
-        <span class="icon business-dash-ico"></span>
+        <span class="icon customer-group-ico"></span>
         <p>Virgin Group</p>
       </div>
       <div class="block4">
-        <p>Can you please tell us if we can order a…</p>
+        <p class="new-post">Can you please tell us if we can order a…</p>
       </div>
       <div class="block5">
           <div class="btn-group">
@@ -142,6 +167,68 @@
               Reject
             </a>
           </div>
+      </div>
+    </li>
+    <li class="row-table-dashboard">
+      <div class="block1">
+        <span class="icon star-ico"></span>
+      </div>
+      <div class="block2">
+        <div>
+          <p>05.08.2016</p>
+          <p>15:14</p>
+        </div>
+        <div>1 day 20:25</div>
+      </div>
+      <div class="block3">
+        <span class="icon customer-single-ico"></span>
+        <p>Sir Richard Charles Nicholas Br…</p>
+      </div>
+      <div class="block4">
+        <p class="old-post">We have an urgent request for ten cars in Reykjavik…</p>
+      </div>
+      <div class="block5">
+        <div class="btn-group">
+          <a href="#" class="btn">
+            <span class="icon check-blue-ico"></span>
+            Offer
+          </a>
+          <a href="#" class="btn">
+            <span class="icon reject-gray-ico"></span>
+            Reject
+          </a>
+        </div>
+      </div>
+    </li>
+    <li class="row-table-dashboard">
+      <div class="block1">
+        <span class="icon star-ico"></span>
+      </div>
+      <div class="block2">
+        <div>
+          <p>05.08.2016</p>
+          <p>15:14</p>
+        </div>
+        <div class="warning-time">10:25</div>
+      </div>
+      <div class="block3">
+        <span class="icon customer-group-ico"></span>
+        <p>Crown Resorts LTD</p>
+      </div>
+      <div class="block4">
+        <p class="old-post">Please add an order for three hotels in Iceland, th…</p>
+      </div>
+      <div class="block5">
+        <div class="btn-group">
+          <a href="#" class="btn">
+            <span class="icon check-blue-ico"></span>
+            Offer
+          </a>
+          <a href="#" class="btn">
+            <span class="icon reject-gray-ico"></span>
+            Reject
+          </a>
+        </div>
       </div>
     </li>
   </ul>

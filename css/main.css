@@ -19,7 +19,7 @@ div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd
 .gradient, aside {
   background: linear-gradient(135deg, #008ccc 35%, #47afb4 90%); }
 
-.shadow, header, .dashboard ul li {
+.shadow, header, .dashboard .list-messages .row-table-dashboard, .dropdown .dropdown-menu {
   -webkit-box-shadow: 0 5px 15px 0 rgba(180, 180, 180, 0.25);
   -moz-box-shadow: 0 5px 15px 0 rgba(180, 180, 180, 0.25);
   box-shadow: 0 5px 15px 0 rgba(180, 180, 180, 0.25); }
@@ -79,27 +79,27 @@ aside {
   width: 16.67%;
   color: white;
   float: left; }
-  aside .header-aside, aside .header-aside-section {
-    font-weight: 400; }
+  aside .header-aside-section {
+    font-weight: 300; }
   aside .header-aside {
     padding: 30px 0 30px 30px;
-    border-bottom: solid 1px #f0f0f0; }
+    border-bottom: solid 1px rgba(89, 181, 208, 0.25); }
     aside .header-aside span {
       font-weight: 400;
       display: inline-block;
-      margin-left: 10px;
       color: white; }
+    aside .header-aside .icon {
+      margin-right: 10px; }
   aside .section-aside {
     padding: 20px 0 20px 20px;
-    border-bottom: solid 1px #f0f0f0; }
+    border-bottom: solid 1px rgba(89, 181, 208, 0.25); }
     aside .section-aside .header-aside-section {
       color: #f0f0f0;
       margin-bottom: 20px; }
     aside .section-aside ul {
       text-align: right; }
     aside .section-aside .item-list.active {
-      background-color: #167491;
-      border-radius: 3px 0 0 3px; }
+      background-color: rgba(1, 1, 1, 0.25); }
       aside .section-aside .item-list.active a:before {
         content: "";
         position: absolute;
@@ -112,7 +112,10 @@ aside {
         border-width: 7px 7px 7px 0;
         border-color: transparent #f0f0f0 transparent transparent; }
     aside .section-aside .item-list {
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      border-radius: 3px 0 0 3px; }
+      aside .section-aside .item-list:hover {
+        background-color: rgba(1, 1, 1, 0.15); }
       aside .section-aside .item-list a {
         display: block;
         color: white;
@@ -125,6 +128,8 @@ aside {
           font-size: 20px; }
         aside .section-aside .item-list a .text-item, aside .section-aside .item-list a .icon, aside .section-aside .item-list a .new {
           float: left; }
+        aside .section-aside .item-list a .number-message {
+          font-weight: 300; }
   aside .collapse-menu-btn {
     padding: 30px 0 30px 30px; }
     aside .collapse-menu-btn a {
@@ -136,13 +141,7 @@ aside {
   background-color: #f0f0f0;
   width: 83.33%;
   float: left;
-  padding: 40px;
-  position: relative; }
-  .dashboard .label-dashboard {
-    color: white;
-    position: absolute;
-    top: 35px;
-    left: 350px; }
+  padding: 40px; }
   .dashboard .header-dashboard {
     padding-bottom: 20px;
     color: #7b7b7b;
@@ -153,54 +152,135 @@ aside {
       margin-right: 20px; }
     .dashboard .header-dashboard .text {
       font-size: 17px; }
-  .dashboard ul {
+  .dashboard .list-messages {
     margin-top: 20px; }
-    .dashboard ul li {
+    .dashboard .list-messages .row-table-dashboard {
       border-radius: 5px;
       background-color: white;
-      display: flex; }
-      .dashboard ul li .block1, .dashboard ul li .block2, .dashboard ul li .block3, .dashboard ul li .block4, .dashboard ul li .block5 {
+      display: flex;
+      margin-bottom: 10px; }
+      .dashboard .list-messages .row-table-dashboard .block1, .dashboard .list-messages .row-table-dashboard .block2, .dashboard .list-messages .row-table-dashboard .block3, .dashboard .list-messages .row-table-dashboard .block4, .dashboard .list-messages .row-table-dashboard .block5 {
         padding: 15px;
         border-right: solid 1px #e3e3e3; }
-      .dashboard ul li .block2, .dashboard ul li .block3, .dashboard ul li .block4, .dashboard ul li .block5 {
+      .dashboard .list-messages .row-table-dashboard .block2, .dashboard .list-messages .row-table-dashboard .block3, .dashboard .list-messages .row-table-dashboard .block4, .dashboard .list-messages .row-table-dashboard .block5 {
         display: flex;
         align-items: center; }
-      .dashboard ul li .block1 {
+      .dashboard .list-messages .row-table-dashboard .block1 {
         background-color: #008ccc;
         border-radius: 5px 0 0 5px;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 4.6%; }
-      .dashboard ul li .block2 {
+      .dashboard .list-messages .row-table-dashboard .block2 {
         width: 19.6%;
         justify-content: space-between;
         font-weight: 300;
         color: #7b7b7b; }
-      .dashboard ul li .block3 {
+        .dashboard .list-messages .row-table-dashboard .block2 .warning-time {
+          color: #ff7415; }
+      .dashboard .list-messages .row-table-dashboard .block3 {
         width: 22.3%;
         color: #7b7b7b; }
-      .dashboard ul li .block4 {
-        width: 35.7%;
-        color: #505050;
-        font-weight: 500; }
-        .dashboard ul li .block4 p {
-          font-size: 14px !important; }
-      .dashboard ul li .block5 {
+      .dashboard .list-messages .row-table-dashboard .block4 {
+        width: 35.7%; }
+        .dashboard .list-messages .row-table-dashboard .block4 .old-post {
+          color: #7b7b7b; }
+        .dashboard .list-messages .row-table-dashboard .block4 .new-post {
+          color: #505050;
+          font-weight: 500;
+          font-size: 14px; }
+      .dashboard .list-messages .row-table-dashboard .block5 {
         width: 17.8%;
-        border: none;
-        justify-content: center; }
-        .dashboard ul li .block5 .btn-group .btn {
-          border-top: solid 1px #e3e3e3;
-          border-bottom: solid 1px #e3e3e3;
-          border-left: solid 1px #e3e3e3;
-          padding: 6px 10px;
-          color: #7b7b7b;
-          font-weight: 300; }
-        .dashboard ul li .block5 .btn-group .btn:first-child {
-          border-radius: 3px 0 0 3px; }
-        .dashboard ul li .block5 .btn-group .btn:last-child {
-          border-radius: 0 3px 3px 0;
-          border-right: solid 1px #e3e3e3; }
+        border: none; }
+        .dashboard .list-messages .row-table-dashboard .block5 .btn-group {
+          display: flex;
+          justify-content: space-around;
+          width: 100%; }
+          .dashboard .list-messages .row-table-dashboard .block5 .btn-group .btn {
+            border-top: solid 1px #e3e3e3;
+            border-bottom: solid 1px #e3e3e3;
+            border-left: solid 1px #e3e3e3;
+            padding: 6px 10px;
+            color: #7b7b7b;
+            font-weight: 300;
+            text-align: center; }
+            .dashboard .list-messages .row-table-dashboard .block5 .btn-group .btn .icon {
+              margin-right: 3px; }
+          .dashboard .list-messages .row-table-dashboard .block5 .btn-group .btn:first-child {
+            border-radius: 3px 0 0 3px;
+            width: 50%; }
+            .dashboard .list-messages .row-table-dashboard .block5 .btn-group .btn:first-child:hover {
+              color: white;
+              background-color: #008ccc;
+              border-color: #008ccc; }
+              .dashboard .list-messages .row-table-dashboard .block5 .btn-group .btn:first-child:hover .icon {
+                background: url("../img/icon-check-white.png"); }
+          .dashboard .list-messages .row-table-dashboard .block5 .btn-group .btn:last-child {
+            border-radius: 0 3px 3px 0;
+            border-right: solid 1px #e3e3e3;
+            width: 50%; }
+            .dashboard .list-messages .row-table-dashboard .block5 .btn-group .btn:last-child:hover {
+              color: white;
+              background-color: #ff7415;
+              border-color: #ff7415; }
+              .dashboard .list-messages .row-table-dashboard .block5 .btn-group .btn:last-child:hover .icon {
+                background: url("../img/icon-reject-white.png"); }
+    .dashboard .list-messages .header-dashboard-table {
+      font-weight: 300;
+      color: #7b7b7b;
+      display: flex;
+      margin-bottom: 10px; }
+      .dashboard .list-messages .header-dashboard-table .header-block1 {
+        margin-left: 4.6%;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 19.6%; }
+      .dashboard .list-messages .header-dashboard-table .header-block2 {
+        width: 22.3%;
+        padding: 15px;
+        display: flex;
+        align-items: center; }
+      .dashboard .list-messages .header-dashboard-table .header-block3 {
+        width: 35.7%;
+        padding: 15px;
+        display: flex;
+        align-items: center; }
+      .dashboard .list-messages .header-dashboard-table .header-block4 {
+        width: 17.8%;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; }
+
+.dropdown {
+  position: relative;
+  background: white;
+  padding: 5px 10px; }
+  .dropdown:hover .dropdown-menu {
+    display: block; }
+  .dropdown .dropdown-menu {
+    position: absolute;
+    display: none;
+    padding: 25px;
+    width: 250px;
+    top: 25px;
+    left: -80%;
+    background: white; }
+    .dropdown .dropdown-menu .item-dropdown:last-child {
+      margin-bottom: 0; }
+    .dropdown .dropdown-menu .item-dropdown {
+      margin-bottom: 20px; }
+      .dropdown .dropdown-menu .item-dropdown .label {
+        margin-bottom: 10px; }
+      .dropdown .dropdown-menu .item-dropdown a {
+        color: #7b7b7b;
+        background-color: #f0f0f0;
+        padding: 5px 10px;
+        display: block;
+        margin-bottom: 10px;
+        border-radius: 3px; }
 
 /*# sourceMappingURL=main.css.map */
