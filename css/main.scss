@@ -222,6 +222,7 @@ aside {
       margin-bottom: 0;
     }
     .row-table-dashboard {
+      z-index: 1;
       @extend .shadow;
       border-radius: 5px;
       background-color: $white-color;

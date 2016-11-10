@@ -157,6 +157,7 @@ aside {
     .dashboard .list-messages .row-table-dashboard.open {
       margin-bottom: 0; }
     .dashboard .list-messages .row-table-dashboard {
+      z-index: 1;
       border-radius: 5px;
       background-color: white;
       display: flex;
