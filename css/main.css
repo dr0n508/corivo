@@ -19,7 +19,7 @@ div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd
 .gradient, aside {
   background: linear-gradient(135deg, #008ccc 35%, #47afb4 90%); }
 
-.shadow, header, .dashboard .list-messages .row-table-dashboard, .dropdown .dropdown-menu {
+.shadow, header, .dashboard .list-messages .row-table-dashboard, .dropdown .dropdown-menu, .open-message {
   -webkit-box-shadow: 0 5px 15px 0 rgba(180, 180, 180, 0.25);
   -moz-box-shadow: 0 5px 15px 0 rgba(180, 180, 180, 0.25);
   box-shadow: 0 5px 15px 0 rgba(180, 180, 180, 0.25); }
@@ -154,6 +154,8 @@ aside {
       font-size: 17px; }
   .dashboard .list-messages {
     margin-top: 20px; }
+    .dashboard .list-messages .row-table-dashboard.open {
+      margin-bottom: 0; }
     .dashboard .list-messages .row-table-dashboard {
       border-radius: 5px;
       background-color: white;
@@ -165,8 +167,9 @@ aside {
       .dashboard .list-messages .row-table-dashboard .block2, .dashboard .list-messages .row-table-dashboard .block3, .dashboard .list-messages .row-table-dashboard .block4, .dashboard .list-messages .row-table-dashboard .block5 {
         display: flex;
         align-items: center; }
+      .dashboard .list-messages .row-table-dashboard .light-blue {
+        background-color: #008ccc; }
       .dashboard .list-messages .row-table-dashboard .block1 {
-        background-color: #008ccc;
         border-radius: 5px 0 0 5px;
         display: flex;
         align-items: center;
@@ -182,6 +185,29 @@ aside {
       .dashboard .list-messages .row-table-dashboard .block3 {
         width: 22.3%;
         color: #7b7b7b; }
+      .dashboard .list-messages .row-table-dashboard .tag-list {
+        flex-direction: column;
+        align-items: flex-start; }
+        .dashboard .list-messages .row-table-dashboard .tag-list .tag {
+          margin-top: 5px; }
+          .dashboard .list-messages .row-table-dashboard .tag-list .tag li {
+            display: inline-block;
+            margin-right: 10px;
+            background-color: #faecd1;
+            padding: 2px 4px;
+            font-size: 11px;
+            color: #7b7b7b;
+            position: relative; }
+            .dashboard .list-messages .row-table-dashboard .tag-list .tag li:after {
+              content: "";
+              right: -7px;
+              top: 0;
+              position: absolute;
+              width: 0;
+              height: 0;
+              border-style: solid;
+              border-width: 8.5px 0 8.5px 7px;
+              border-color: transparent transparent transparent #faecd1; }
       .dashboard .list-messages .row-table-dashboard .block4 {
         width: 35.7%; }
         .dashboard .list-messages .row-table-dashboard .block4 .old-post {
@@ -282,5 +308,48 @@ aside {
         display: block;
         margin-bottom: 10px;
         border-radius: 3px; }
+
+.open-message {
+  display: flex;
+  background-color: white;
+  padding-top: 20px; }
+  .open-message .b1 {
+    width: 25%;
+    padding: 15px 15px 15px 40px; }
+    .open-message .b1 .email-client {
+      font-size: 17px;
+      font-weight: 500; }
+    .open-message .b1 .text-notification {
+      padding: 20px 0;
+      color: #7b7b7b; }
+    .open-message .b1 form {
+      /* Firefox 19+ */
+      /* Firefox 18- */ }
+      .open-message .b1 form input {
+        border: none;
+        border: solid 1px #e3e3e3;
+        border-radius: 3px;
+        padding: 5px 10px;
+        margin-bottom: 5px;
+        width: 100%;
+        font-size: 14px; }
+      .open-message .b1 form input::-webkit-input-placeholder {
+        font-size: 14px;
+        font-weight: 300;
+        color: #7b7b7b; }
+      .open-message .b1 form input::-moz-placeholder {
+        color: #c0392b; }
+      .open-message .b1 form input:-moz-placeholder {
+        color: #c0392b; }
+      .open-message .b1 form input:-ms-input-placeholder {
+        color: #c0392b; }
+  .open-message .b2 {
+    width: 23.2%;
+    border-right: dashed 1px #e3e3e3;
+    border-left: dashed 1px #e3e3e3;
+    padding: 15px; }
+  .open-message .b3 {
+    width: 51.7%;
+    padding: 15px; }
 
 /*# sourceMappingURL=main.css.map */
